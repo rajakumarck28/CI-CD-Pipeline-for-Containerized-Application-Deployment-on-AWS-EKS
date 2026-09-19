@@ -77,4 +77,4 @@ pipeline {
             echo 'Pipeline Failed!' 
         } 
     } 
-} this my jenkinsfile i want deploy through eks
+}
