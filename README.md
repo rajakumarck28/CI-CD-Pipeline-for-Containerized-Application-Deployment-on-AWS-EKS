@@ -632,7 +632,10 @@ Flask Application
 The implementation demonstrates practical experience with **CI/CD automation, containerization, Kubernetes deployment, AWS ECR, Amazon EKS, AWS Fargate, IAM-based authentication, and automated application delivery**.
 
 
-
-
-
+<img width="1920" height="1080" alt="Screenshot (70)" src="https://github.com/user-attachments/assets/a1eb1635-6e61-4355-8194-78f26df2beae" />
+<img width="1920" height="1080" alt="Screenshot (71)" src="https://github.com/user-attachments/assets/1a5ba0bd-929d-4fb1-ade6-19f75df4ae68" />
+<img width="1920" height="1080" alt="Screenshot (72)" src="https://github.com/user-attachments/assets/0617170c-f110-414b-b342-4402cdbd40c7" />
+<img width="1920" height="1080" alt="Screenshot (73)" src="https://github.com/user-attachments/assets/30743d80-1329-46b8-8e02-05c1ddd947cd" />
+<img width="1920" height="1080" alt="Screenshot (74)" src="https://github.com/user-attachments/assets/d90051c1-d7a3-4216-8dcb-118fd6bb3133" />
+<img width="1920" height="1080" alt="Screenshot (75)" src="https://github.com/user-attachments/assets/45a5b3a3-8daa-4f05-99fc-14422f898870" />
 
