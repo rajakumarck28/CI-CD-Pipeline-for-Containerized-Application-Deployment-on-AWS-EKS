@@ -1,4 +1,4 @@
-# CI/CD Pipeline for Containerized Application Deployment on Amazon EKS
+# CI/CD Pipeline for Containerized Application Deployment on AWS EKS
 
 ## 📌 Project Overview
 
