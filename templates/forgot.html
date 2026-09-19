@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Reset Password</h2>
+
+<form action="/forgot-password" method="POST">
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <input type="password" name="newpassword" placeholder="New Password" required>
+
+    <button type="submit">Reset Password</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
