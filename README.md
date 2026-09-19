@@ -1,6 +1,6 @@
 # CI/CD Pipeline for Containerized Application Deployment on AWS EKS
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates an end-to-end **CI/CD pipeline for deploying a containerized Flask application to Amazon EKS using AWS Fargate**.
 
@@ -10,7 +10,7 @@ The project uses **Jenkins** as the CI/CD automation server, **SonarQube** for s
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```text
                          Developer
@@ -38,16 +38,6 @@ The project uses **Jenkins** as the CI/CD automation server, **SonarQube** for s
                                              v
                                        Amazon EKS
                                              |
-                                      Fargate Profile
-                                             |
-                          +------------------+------------------+
-                          |                                     |
-                          v                                     v
-                    Flask Pod 1                           Flask Pod 2
-                     Fargate                                Fargate
-                          |                                     |
-                          +------------------+------------------+
-                                             |
                                              v
                                       Kubernetes Service
                                              |
@@ -70,7 +60,6 @@ The project uses **Jenkins** as the CI/CD automation server, **SonarQube** for s
 | Docker            | Application containerization           |
 | Amazon ECR        | Docker image registry                  |
 | Amazon EKS        | Managed Kubernetes                     |
-| AWS Fargate       | Serverless compute for Kubernetes Pods |
 | Kubernetes        | Container orchestration                |
 | AWS IAM           | Authentication and authorization       |
 | AWS Load Balancer | Application access from the internet   |
@@ -153,13 +142,7 @@ Example image:
 * Kubernetes Deployment manages the Flask application Pods.
 * Kubernetes Service exposes the application.
 
-### 6. AWS Fargate
-
-* Application Pods run on AWS Fargate.
-* No EC2 worker-node management is required for the application workload.
-* A Kubernetes Fargate profile is used to schedule Flask application Pods on Fargate.
-
-### 7. Kubernetes Deployment
+### 6. Kubernetes Deployment
 
 The application runs with multiple replicas:
 
@@ -169,7 +152,7 @@ replicas: 2
 
 This provides two Flask Pods for the application.
 
-### 8. Kubernetes Service
+### 7. Kubernetes Service
 
 The application is exposed using:
 
@@ -218,7 +201,7 @@ The Jenkins server should have access to AWS through an IAM role.
 
 ---
 
-# 🔐 AWS IAM Configuration
+#  AWS IAM Configuration
 
 The Jenkins EC2 server uses an **IAM role** to access AWS services.
 
@@ -236,7 +219,7 @@ For a learning environment, `AdministratorAccess` can be used, although a produc
 
 ---
 
-# ☁️ Create ECR Repository
+#  Create ECR Repository
 
 Create the ECR repository:
 
@@ -256,7 +239,7 @@ aws ecr describe-repositories \
 
 ---
 
-# ☸️ Create EKS Fargate Cluster
+#  Create EKS Fargate Cluster
 
 Create an EKS cluster:
 
@@ -293,7 +276,7 @@ eksctl get fargateprofile \
 
 ---
 
-# 🐳 Docker Image
+#  Docker Image
 
 Build the image locally:
 
@@ -315,7 +298,7 @@ http://localhost:5000
 
 ---
 
-# ☸️ Kubernetes Deployment
+#  Kubernetes Deployment
 
 Example `deployment.yaml`:
 
@@ -353,7 +336,7 @@ spec:
 
 ---
 
-# 🌐 Kubernetes Service
+#  Kubernetes Service
 
 Example `service.yaml`:
 
@@ -379,7 +362,7 @@ spec:
 
 ---
 
-# 🔧 Jenkins Pipeline
+#  Jenkins Pipeline
 
 The Jenkins pipeline performs:
 
@@ -409,7 +392,7 @@ No AWS credentials are stored directly in the Jenkinsfile.
 
 ---
 
-# 📝 Jenkins Pipeline Stages
+#  Jenkins Pipeline Stages
 
 ### Clone Code
 
@@ -487,7 +470,7 @@ Checks:
 
 ---
 
-# 🔍 Verify Deployment
+#  Verify Deployment
 
 Check Pods:
 
@@ -521,7 +504,7 @@ kubectl logs <pod-name> -n flask-app
 
 ---
 
-# 🌍 Access the Application
+#  Access the Application
 
 Get the Load Balancer hostname:
 
@@ -546,7 +529,7 @@ http://<LOAD-BALANCER-DNS>
 
 ---
 
-# 🔄 Continuous Deployment
+#  Continuous Deployment
 
 Every new GitHub/Jenkins build can create a new Docker image version.
 
@@ -570,7 +553,7 @@ Kubernetes performs a rolling update of the application Pods.
 
 ---
 
-# 🛡️ Security
+#  Security
 
 The project avoids storing AWS access keys directly in the Jenkinsfile.
 
@@ -597,12 +580,11 @@ inside source code.
 
 ---
 
-# 💰 AWS Cost Consideration
+#  AWS Cost Consideration
 
 This project uses AWS services that may generate charges, including:
 
 * Amazon EKS
-* AWS Fargate
 * Amazon ECR
 * AWS Load Balancer
 * Other associated AWS resources
@@ -619,7 +601,7 @@ eksctl delete cluster \
 
 ---
 
-# 📊 Project Outcome
+# Project Outcome
 
 This project demonstrates an automated cloud-native CI/CD workflow:
 
