@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+
+  flask-app:
+    image: akshay9480/flask-auth-app:latest
+    container_name: flask-auth-app
+
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - mysql-db
+
+    environment:
+      MYSQL_HOST: mysql-db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root123
+      MYSQL_DB: authapp
+
+    restart: always
+
+  mysql-db:
+    image: mysql:8
+
+    container_name: mysql-db
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: authapp
+
+    ports:
+      - "3306:3306"
+
+    restart: always
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
