@@ -20,7 +20,7 @@ spec:
       containers:
         - name: flask-app
 
-          image: 969169896307.dkr.ecr.ap-south-1.amazonaws.com/flask-auth-app:latest
+          image: 969169896307.dkr.ecr.eu-north-1.amazonaws.com/flask-auth-app
 
           ports:
             - containerPort: 5000
