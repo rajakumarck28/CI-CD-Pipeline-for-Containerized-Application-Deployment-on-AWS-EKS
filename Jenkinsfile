@@ -18,7 +18,7 @@ pipeline {
         stage('Clone Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/rajakumarck28/CI-CD-Pipeline-for-Containerized-Application-Deployment-on-Amazon-EKS.git'
+                url: 'https://github.com/rajakumarck28/CI-CD-Pipeline-for-Containerized-Application-Deployment-on-AWS-EKS.git'
             }
         }
 
